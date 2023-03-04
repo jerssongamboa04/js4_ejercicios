@@ -94,22 +94,18 @@ Trate de implementarlo de maneras diferentes */
 //    Ingrese un número: 2
 //    2 es un número par
 
-let par = parseInt(prompt('ingresa un numero par o inpar'))
+// let par = parseInt(prompt('ingresa un numero par o inpar'))
 
-if (typeof par === "number") {
-    if (par % 2 == 0) {
-        console.log('esto es un numero par')
-    }
-    else {
-        console.log('Esto es un numero impar')
-    }
-}else{
-    console.log("Entrada incorrecta")
-}
-
-
-
-
+// if (typeof par === "number") {
+//     if (par % 2 == 0) {
+//         console.log('Esto es un numero par')
+//     }
+//     else {
+//         console.log('Esto es un numero impar')
+//     }
+// }else{
+//     console.log("Entrada incorrecta")
+// }
 //    Ingrese un número: 9
 //    9 es un número impar
 //    ```
@@ -122,6 +118,28 @@ if (typeof par === "number") {
 //    - 60-69, C
 //    - 50-59, D
 //    - 0-49, F
+
+// let note = prompt("ingrese la nota por favor:");
+
+// if (note >= 0 && note <= 49) {
+//     console.log("E");
+
+// } else if (note >= 50 && note <= 59) {
+//     console.log("D");
+
+// } else if (note >= 60 && note <= 69) {
+//     console.log("C");
+
+// } else if (note >= 70 && note <= 89) {
+//     console.log("B");
+
+// } else if (note >= 80 && note <= 100) {
+//     console.log("A");
+
+// } else {
+//     console.log("Formato de nota incorrecto")
+// }
+
 // 2. Consulta si la temporada es Otoño, Invierno, Primavera o Verano.
 //    Si la entrada del usuario es :
 
@@ -130,7 +148,56 @@ if (typeof par === "number") {
 //    - Marzo, Abril o Mayo, la temporada es Primavera
 //    - Junio, Julio o Agosto, la temporada es Verano
 
-// 3. Compruebe si un día es un día de fin de semana o un día laborable. Su script tomará el día como entrada.
+let season = prompt('ingresa un mes')
+
+switch (season) {
+    case "septiembre":
+      console.log("la temporada es Otoño");
+      break;
+    case "octubre":
+      console.log("la temporada es Otoño");
+      break;
+    case "noviembre":
+      console.log("la temporada es Otoño");
+      break;
+    case "diciembre":
+      console.log("la temporada es Invierno");
+      break;
+    case "enero":
+      console.log("la temporada es Invierno");
+      break;
+    case "febrero":
+      console.log("la temporada es Invierno");
+      break;
+    case "marzo":
+      console.log("la temporada es Primavera");
+      break;
+
+      case "abril":
+      console.log("la temporada es Primavera");
+      break;
+
+      case "mayo":
+      console.log("la temporada es Primavera");
+      break;
+
+      case "junio":
+      console.log("la temporada es Verano");
+      break;
+
+      case "julio":
+      console.log("la temporada es Verano");
+      break;
+
+      case "agosto":
+      console.log("la temporada es Verano");
+      break;
+
+    default:
+      console.log("No es un mes .");
+  }
+// 3. Compruebe si un día es un día de fin de semana o un día laborable.
+//  Su script tomará el día como entrada.
 
 // ```sh
 //     ¿Qué día es hoy? Sábado
@@ -145,6 +212,37 @@ if (typeof par === "number") {
 //     ¿Qué día es hoy? ViErNes
 //     El viernes es un día laborable.
 // ```
+
+let dia = prompt('ingrese un dia de la semana')
+let day = dia.toLowerCase();
+
+switch (day) {
+    case "lunes":
+      console.log("El lunes es un dia laborable");
+      break;
+    case "martes":
+      console.log("El Martes es un dia laborable");
+      break;
+    case "miércoles":
+      console.log("El Miércoles es un dia laborable");
+      break;
+    case "jueves":
+      console.log("El Jueves es un dia laborable");
+      break;
+    case "viernes":
+      console.log("El Viernes es un dia laborable");
+      break;
+    case "sábado":
+      console.log("El Sábado es fin de semana");
+      break;
+    case "domingo":
+      console.log("El Domingo es fin de semana");
+      break;
+    default:
+      console.log("No es un día de semana.");
+  }
+
+
 
 // ### Ejercicios: Nivel 3
 
@@ -165,3 +263,59 @@ if (typeof par === "number") {
 // ```
 
 // 2. Escribe un programa que diga el número de días en un mes, ahora considera un año bisiesto.
+
+let usuario = prompt('ingrese un mes')
+let  usuarioMonth = usuario.toLocaleLowerCase();
+let typeYears = prompt('indique el tipo de año')
+
+switch (usuarioMonth) {
+    case "septiembre":
+      console.log("Septiembre tiene 30 dias");
+      break;
+    case "octubre":
+      console.log("Octubre tiene 31 dias");
+      break;
+    case "noviembre":
+      console.log("Noviembre tiene 30 dias");
+      break;
+    case "diciembre":
+      console.log("Diciembre tiene 31 dias");
+      break;
+    case "enero":
+      console.log("Enero tiene 31 días");
+      break;
+    case "febrero":
+        if (typeYears === 'bisiesto') {
+            console.log( 'febrero tiene 29 dias');
+        } else {
+        console.log("Febrero tiene 28 dias");
+        }
+      break;
+    case "marzo":
+      console.log("Marzo tiene 31 dias");
+      break;
+
+      case "abril":
+      console.log("Abril tiene 30 dias");
+      break;
+
+      case "mayo":
+      console.log("Mayo tiene 31 dias");
+      break;
+
+      case "junio":
+      console.log("Junio tiene 30 dias");
+      break;
+
+      case "julio":
+      console.log("Julio tiene 31 dias");
+      break;
+
+      case "agosto":
+      console.log("Agosto tiene 31 dias");
+      break;
+
+    default:
+      console.log("No es un mes .");
+  }
+
